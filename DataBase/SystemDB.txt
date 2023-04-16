@@ -1,0 +1,170 @@
+create table admin(
+adm_id int primary key identity(1,1),
+adm_name varchar(40) not null,
+adm_user varchar(50) not null unique,
+adm_pass varchar(50) not null,
+adm_sec_que varchar(50) not null,
+adm_sec_ans varchar(50) not null,
+adm_phone int not null, 
+adm_gender varchar(20) not null,
+adm_user_type varchar(40) default 'admin',
+adm_salary int not null,
+admin_photo image 
+)
+
+
+
+
+
+
+create table doctor(
+doc_id int primary key identity (1,1),
+doc_name varchar(50) not null,
+doc_user varchar(50) not null unique,
+doc_pass varchar(50) not null,
+doc_sec_que varchar(50) not null,
+doc_sec_ans varchar(50) not null,
+docPhone int not null unique ,
+doc_spec varchar(40) not null,
+doc_exp varchar(50) not null,
+doc_gender varchar(50) not null,
+doc_user_type varchar(50) default 'doctor' , 
+doc_salary int not null, 
+doc_reg_Date DateTime default GetDate(),
+doc_image image )
+
+
+
+
+
+
+
+
+create table nurse(
+nur_id  int primary key identity (1,1),
+nur_name varchar(50) not null,
+nur_user varchar(50) not null unique,
+nur_pass varchar(50) not null,
+nur_sec_que varchar(50) not null,
+nur_sec_ans varchar(50) not null,
+nur_phone int  not null,
+nur_gender varchar(50) not null,
+nur_user_type varchar(40) default 'nurse',
+nur_salary int not null ,
+nur_spec varchar(40) not null,
+nur_reg_date DateTime default GetDate(),
+nur_image image 
+)
+
+
+
+
+
+
+create table receptions(
+recep_id int primary key identity (1,1),
+recep_name varchar(40) not null,
+recep_user varchar(50) not null unique,
+recep_pass varchar(50) not null,
+recep_sec_que varchar(50) not null,
+recep_sec_ans varchar(50) not null,
+recep_phone int not null,
+recep_gender varchar(20) not null, 
+recep_user_type varchar(40) default 'reception',
+recep_salary int not null,
+recep_reg_date DateTime default GetDate(),
+recep_image image 
+)
+
+
+
+
+
+
+create table patient(
+pat_id int primary key identity (1,1),
+pat_name varchar(50) not null,
+pat_phone int not null Unique, 
+pat_Gender varchar(50) not null,
+pat_blood varchar(50) not null,
+pat_Reg_Date DateTime Default GetDate())
+
+
+
+
+
+create table Diagnosis(
+app_id int Primary key,
+pat_name varchar(40) not null, 
+pat_gender varchar(20) not null, 
+doc_spec varchar(30) not null, 
+doc_name varchar(30) not null,
+pat_Diagnosis_disease varchar(30) not null, 
+pat_status varchar(10) not null, 
+pat_symptoms varchar(40) not null)
+
+
+
+
+create table pharmacy( p_id int primary key , 
+pat_name varchar(30) not null,
+doc_name varchar(30) not null,
+pat_disease varchar(30) not null,
+pat_medicine varchar(30) not null,
+med_type varchar(20) not null,
+Med_quantity int not null,
+med_Cost int not null)
+
+
+
+
+create table Appointmentss(
+pat_App_id int primary key  ,
+pat_App_name varchar(40) not null, 
+pat_App_Gender varchar(20) not null,  
+doc_App_Spec varchar(30) not null,
+doc_App_name varchar(40) not null, 
+pat_App_Card_Peyment int not null,
+pat_App_Date_reg varchar(40) not null )
+
+
+
+
+
+ create table doctor_Appointments( pat_App_id int primary key  , 
+ pat_name varchar(40) not null, 
+ pat_gender varchar(20) not null, 
+ doc_spec varchar(30) not null, 
+ doc_name varchar(30) not null,
+ pat_Diagnosis_disease varchar(30) not null)
+
+
+
+
+
+
+
+create table Diagnosis(
+app_id int Primary key,
+pat_name varchar(40) not null, 
+pat_gender varchar(20) not null, 
+doc_spec varchar(30) not null, 
+doc_name varchar(30) not null,
+pat_Diagnosis_disease varchar(30) not null, 
+pat_status varchar(10) not null, 
+pat_symptoms varchar(40) not null)
+
+
+
+
+	create table ResultDiagnosis(p_id int primary key ,
+	p_name varchar(30) not null, 
+	d_name varchar(30) not null,
+	p_disease varchar(30) not null,
+	p_status varchar(30) not null , 
+	p_symptoms varchar(30) not null ,
+	p_medicine varchar(30) not null  )
+
+
+
+

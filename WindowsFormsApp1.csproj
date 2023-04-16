@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCE490DF-CF6F-48A4-AC7F-A4F4F6147F73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\c_sharp project\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Appointment.Designer.cs">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conClass.cs" />
+    <Compile Include="CrAllPatein.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrAllPatein.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Diagnosis.Designer.cs">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocApp.Designer.cs">
+      <DependentUpon>DocApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myPrints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myPrints.Designer.cs">
+      <DependentUpon>myPrints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pharmacy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pharmacy.Designer.cs">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintAll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrintAll.Designer.cs">
+      <DependentUpon>PrintAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reception.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reception.Designer.cs">
+      <DependentUpon>Reception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Re_diagnosis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Re_diagnosis.Designer.cs">
+      <DependentUpon>Re_diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestDashboardcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDashboardcs.Designer.cs">
+      <DependentUpon>TestDashboardcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedProfile.Designer.cs">
+      <DependentUpon>UpdatedProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userProfile.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrAllPatein.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrAllPatein.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosis.resx">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocApp.resx">
+      <DependentUpon>DocApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myPrints.resx">
+      <DependentUpon>myPrints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy.resx">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintAll.resx">
+      <DependentUpon>PrintAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reception.resx">
+      <DependentUpon>Reception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Re_diagnosis.resx">
+      <DependentUpon>Re_diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDashboardcs.resx">
+      <DependentUpon>TestDashboardcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedProfile.resx">
+      <DependentUpon>UpdatedProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical_doctor_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reception_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy_shop_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out_patient_department_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_calendar_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_diagnostic_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_diagnostic_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macos_minimize_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macos_minimize_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical_doctor_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reception_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out_patient_department_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add properties_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macos_close_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-pana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forgot password-pana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abdikafi Isse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_giving_advice_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_desk_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sick_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timetable_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_checked_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_diagnostic_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_diagnostic_32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy_shop_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_file_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forgot password-cuate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout Rounded_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lab1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_60px10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_128px9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_32px9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicine-bro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nursing home-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\End of workday-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gynecology consultation-pana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctors-pana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule-pana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laboratory-bro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
